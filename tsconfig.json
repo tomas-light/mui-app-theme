@@ -14,10 +14,17 @@
 
     "baseUrl": "./src/",
     "paths": {
-      "@app-theme": ["./index"],
-      "@app-theme/colors": ["./colors/index"],
-      "@app-theme/overrides": ["./overrides/index"],
-      "@app-theme/styles": ["./colors/styles"]
+      "@app-theme": ["./index.ts"],
+      "@app-theme/*": ["./*"],
+
+      "@app-theme/colors": ["./colors/index.ts"],
+      "@app-theme/colors/*": ["./colors/*"],
+
+      "@app-theme/overrides": ["./overrides/index.ts"],
+      "@app-theme/overrides/*": ["./overrides/*"],
+
+      "@app-theme/styles": ["./styles/index.ts"],
+      "@app-theme/styles/*": ["./styles/*"]
     }
   },
   "include": [
