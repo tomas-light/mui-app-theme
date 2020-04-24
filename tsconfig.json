@@ -14,10 +14,10 @@
 
     "baseUrl": "./src/",
     "paths": {
-      "mui-app-theme": ["index"],
-      "mui-app-theme/colors": ["colors/index"],
-      "mui-app-theme/overrides": ["overrides/index"],
-      "mui-app-theme/styles": ["colors/styles"]
+      "@app-theme": ["./index"],
+      "@app-theme/colors": ["./colors/index"],
+      "@app-theme/overrides": ["./overrides/index"],
+      "@app-theme/styles": ["./colors/styles"]
     }
   },
   "include": [
