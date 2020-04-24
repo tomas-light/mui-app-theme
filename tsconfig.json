@@ -2,35 +2,20 @@
   "compilerOptions": {
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
+    "baseUrl": "./",
     "checkJs": true,
+    "declaration": true,
     "esModuleInterop": true,
     "importHelpers": true,
     "module": "esnext",
     "moduleResolution": "node",
     "noErrorTruncation": true,
+    "outDir": "./dist",
     "skipLibCheck": true,
+    "strict": true,
     "sourceMap": true,
-    "target": "es6",
-
-    "baseUrl": "./",
-    "paths": {
-      "@app-theme": ["./src/index"],
-      "@app-theme/*": ["./src/*"],
-
-      "@app-theme/colors": ["./src/colors/index"],
-      "@app-theme/colors/*": ["./src/colors/*"],
-
-      "@app-theme/overrides": ["./src/overrides/index"],
-      "@app-theme/overrides/*": ["./src/overrides/*"],
-
-      "@app-theme/styles": ["./src/styles/index"],
-      "@app-theme/styles/*": ["./src/styles/*"]
-    }
+    "target": "es6"
   },
-  "include": [
-    "**/*.ts"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["src"],
+  "exclude": ["node_modules"]
 }
