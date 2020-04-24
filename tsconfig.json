@@ -2,7 +2,6 @@
   "compilerOptions": {
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
-    "baseUrl": "./src/",
     "checkJs": true,
     "esModuleInterop": true,
     "importHelpers": true,
@@ -11,7 +10,15 @@
     "noErrorTruncation": true,
     "skipLibCheck": true,
     "sourceMap": true,
-    "target": "es6"
+    "target": "es6",
+
+    "baseUrl": "./src/",
+    "paths": {
+      "mui-app-theme": ["index"],
+      "mui-app-theme/colors": ["colors/index"],
+      "mui-app-theme/overrides": ["overrides/index"],
+      "mui-app-theme/styles": ["colors/styles"]
+    }
   },
   "include": [
     "**/*.ts"
