@@ -4,8 +4,7 @@ import { AppTheme } from "./AppTheme";
 import { AppThemeColors } from "./AppThemeColors";
 import { IAppTheme } from "./IAppTheme";
 import { IAppThemeColors } from "./IAppThemeColors";
-import { overrideMaterialUIPalette } from "./overrides/overrideMaterialUIPalette";
-import { overrideMaterialUIStyles } from "./overrides/overrideMaterialUIStyles";
+import { overrideMaterialUIPalette, overrideMaterialUIStyles } from "./overrides";
 
 export function createAppTheme(themeColors: IAppThemeColors = new AppThemeColors()): IAppTheme {
     const overriddenPalette = overrideMaterialUIPalette(themeColors);
@@ -16,9 +15,6 @@ export function createAppTheme(themeColors: IAppThemeColors = new AppThemeColors
         overrides: overriddenStyles,
     });
 
-    const appTheme: IAppTheme = new AppTheme(
-        muiTheme,
-        themeColors,
-    );
+    const appTheme: IAppTheme = new AppTheme(muiTheme, themeColors);
     return appTheme;
 }

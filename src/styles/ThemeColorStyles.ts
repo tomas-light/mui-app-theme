@@ -6,10 +6,7 @@ import { MainColorVariant } from "./MainColorVariant";
 import { useTextColorStyles } from "./TextColorStyles";
 import { TextColorVariant } from "./TextColorVariant";
 
-type ColorVariant =
-    | TextColorVariant
-    | MainColorVariant
-    | InfoColorVariant;
+type ColorVariant = TextColorVariant | MainColorVariant | InfoColorVariant;
 
 export const useThemeColorStyles = (props?: any): ClassNameMap<ColorVariant> => ({
     ...useMainColorStyles(props),

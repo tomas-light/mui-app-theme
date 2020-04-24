@@ -1,5 +1,1 @@
-export type TextColorVariant =
-    | "strong"
-    | "medium"
-    | "light"
-    | "disabled";
+export type TextColorVariant = "strong" | "medium" | "light" | "disabled";

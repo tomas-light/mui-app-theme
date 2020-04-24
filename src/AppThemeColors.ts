@@ -1,7 +1,4 @@
-import { IButtonColor } from "./colors/IButtonColor";
-import { IBorderColor } from "./colors/IBorderColor";
-import { IColor } from "./colors/IColor";
-import { ITextColor } from "./colors/ITextColor";
+import { IButtonColor, IBorderColor, IColor, ITextColor } from "./colors";
 import { IAppThemeColors } from "./IAppThemeColors";
 
 export class AppThemeColors implements IAppThemeColors {

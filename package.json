@@ -1,6 +1,6 @@
 {
   "name": "mui-app-theme",
-  "version": "0.5.8",
+  "version": "0.6.0",
   "description": "Allow to override material ui theme colors",
   "contributors": [
     {
@@ -11,8 +11,15 @@
   "author": "TomasLight",
   "license": "MIT",
   "scripts": {
-    "build": "tsc"
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run lint",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "tslint -p tsconfig.json"
   },
+  "files": [
+    "dist/**/*"
+  ],
   "dependencies": {
     "@material-ui/core": "4.9.1",
     "react": "16.12.0",
@@ -20,6 +27,10 @@
   },
   "devDependencies": {
     "@types/material-ui": "0.21.7",
+    "prettier": "^2.0.5",
+    "tslint": "6.0.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-eslint-rules": "5.4.0",
     "typescript": "3.8.3"
   },
   "repository": {
