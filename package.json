@@ -1,0 +1,19 @@
+{
+  "name": "mui-app-theme",
+  "version": "0.5.0",
+  "description": "Allow to override material ui theme colors",
+  "contributors": [
+    {
+      "name": "Artem Ignatev",
+      "email": "art.ser.ignatiev@gmail.com"
+    }
+  ],
+  "author": "TomasLight",
+  "license": "MIT",
+  "dependencies": {
+    "@material-ui/core": "4.9.1"
+  },
+  "devDependencies": {
+    "@types/material-ui": "0.21.7"
+  }
+}
