@@ -12,19 +12,19 @@
     "sourceMap": true,
     "target": "es6",
 
-    "baseUrl": "./src/",
+    "baseUrl": "./",
     "paths": {
-      "@app-theme": ["./index.ts"],
-      "@app-theme/*": ["./*"],
+      "@app-theme": ["./src/index"],
+      "@app-theme/*": ["./src/*"],
 
-      "@app-theme/colors": ["./colors/index.ts"],
-      "@app-theme/colors/*": ["./colors/*"],
+      "@app-theme/colors": ["./src/colors/index"],
+      "@app-theme/colors/*": ["./src/colors/*"],
 
-      "@app-theme/overrides": ["./overrides/index.ts"],
-      "@app-theme/overrides/*": ["./overrides/*"],
+      "@app-theme/overrides": ["./src/overrides/index"],
+      "@app-theme/overrides/*": ["./src/overrides/*"],
 
-      "@app-theme/styles": ["./styles/index.ts"],
-      "@app-theme/styles/*": ["./styles/*"]
+      "@app-theme/styles": ["./src/styles/index"],
+      "@app-theme/styles/*": ["./src/styles/*"]
     }
   },
   "include": [
