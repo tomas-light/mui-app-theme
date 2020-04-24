@@ -13,6 +13,7 @@
   "scripts": {
     "prepare": "npm run build",
     "prepublishOnly": "npm run lint",
+    "preversion" : "npm run lint",
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\"",
     "lint": "tslint -p tsconfig.json"
@@ -20,6 +21,8 @@
   "files": [
     "dist/**/*"
   ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "dependencies": {
     "@material-ui/core": "4.9.1",
     "react": "16.12.0",
