@@ -14,6 +14,7 @@ export function overrideMaterialUIPalette(colors: IAppThemeColors): PaletteOptio
         },
         background: {
             default: colors.background,
+            paper: colors.surface,
         },
     };
 }
