@@ -1,5 +1,5 @@
 import { makeStyles } from "@material-ui/core";
-import { IAppTheme } from "../IAppTheme";
+import { IAppTheme } from "../../IAppTheme";
 import { MainColorVariant } from "./MainColorVariant";
 
 export const useMainColorStyles = makeStyles<IAppTheme, MainColorVariant>((theme: IAppTheme) => ({

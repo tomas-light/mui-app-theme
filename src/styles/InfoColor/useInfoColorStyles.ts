@@ -1,5 +1,5 @@
 import { makeStyles } from "@material-ui/core";
-import { IAppTheme } from "../IAppTheme";
+import { IAppTheme } from "../../IAppTheme";
 import { InfoColorVariant } from "./InfoColorVariant";
 
 export const useInfoColorStyles = makeStyles<IAppTheme, InfoColorVariant>((theme: IAppTheme) => ({
