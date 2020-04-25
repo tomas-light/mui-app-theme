@@ -6,7 +6,9 @@ import { IAppTheme } from "./IAppTheme";
 import { ICreateAppThemeOptions } from "./ICreateAppThemeOptions";
 import { overrideMaterialUIPalette, overrideMaterialUIStyles } from "./overrides";
 
-export function createAppTheme(options: ICreateAppThemeOptions = new DefaultCreateAppThemeOptions()): IAppTheme {
+export function createAppTheme(
+    options: Partial<ICreateAppThemeOptions> = new DefaultCreateAppThemeOptions()
+): IAppTheme {
     if (!options.themeColors) {
         options.themeColors = DefaultCreateAppThemeOptions.DefaultAppThemeColors();
     }
@@ -23,6 +25,6 @@ export function createAppTheme(options: ICreateAppThemeOptions = new DefaultCrea
         overrides: overriddenStyles,
     });
 
-    const appTheme: IAppTheme = new AppTheme(muiTheme, options);
+    const appTheme: IAppTheme = new AppTheme(muiTheme, options as ICreateAppThemeOptions);
     return appTheme;
 }
