@@ -1,6 +1,6 @@
 {
   "name": "mui-app-theme",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Allow to override material ui theme colors",
   "contributors": [
     {
