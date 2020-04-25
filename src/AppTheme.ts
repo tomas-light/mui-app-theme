@@ -12,6 +12,7 @@ import { ZIndex } from "@material-ui/core/styles/zIndex";
 
 import { IAppTheme } from "./IAppTheme";
 import { IAppThemeColors } from "./IAppThemeColors";
+import { IAppThemeTypography } from "./IAppThemeTypography";
 
 export class AppTheme implements Theme, IAppTheme {
     public breakpoints: Breakpoints;
@@ -25,10 +26,10 @@ export class AppTheme implements Theme, IAppTheme {
     public shape: Shape;
     public spacing: Spacing;
     public transitions: Transitions;
-    public typography: Typography;
+    public typography: Typography & IAppThemeTypography;
     public zIndex: ZIndex;
 
-    constructor(theme: Theme, colors: IAppThemeColors) {
+    constructor(theme: Theme, colors: IAppThemeColors, typography: IAppThemeTypography) {
         this.breakpoints = theme.breakpoints;
         this.direction = theme.direction;
         this.mixins = theme.mixins;
@@ -39,7 +40,10 @@ export class AppTheme implements Theme, IAppTheme {
         this.shape = theme.shape;
         this.spacing = theme.spacing;
         this.transitions = theme.transitions;
-        this.typography = theme.typography;
+        this.typography = {
+            ...theme.typography,
+            ...typography,
+        };
         this.zIndex = theme.zIndex;
 
         this.colors = colors;
