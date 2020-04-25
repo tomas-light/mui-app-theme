@@ -1,26 +1,28 @@
 import createMuiTheme from "@material-ui/core/styles/createMuiTheme";
 
 import { AppTheme } from "./AppTheme";
-import { AppThemeColors } from "./AppThemeColors";
-import { AppThemeTypography } from "./AppThemeTypography";
+import { DefaultCreateAppThemeOptions } from "./DefaultCreateAppThemeOptions";
 import { IAppTheme } from "./IAppTheme";
-import { IAppThemeColors } from "./IAppThemeColors";
-import { IAppThemeTypography } from "./IAppThemeTypography";
+import { ICreateAppThemeOptions } from "./ICreateAppThemeOptions";
 import { overrideMaterialUIPalette, overrideMaterialUIStyles } from "./overrides";
 
-export function createAppTheme(
-    themeColors: IAppThemeColors = new AppThemeColors(),
-    themeTypography: IAppThemeTypography = new AppThemeTypography()
-): IAppTheme {
+export function createAppTheme(options: ICreateAppThemeOptions = new DefaultCreateAppThemeOptions()): IAppTheme {
+    if (!options.themeColors) {
+        options.themeColors = DefaultCreateAppThemeOptions.DefaultAppThemeColors();
+    }
 
-    const overriddenPalette = overrideMaterialUIPalette(themeColors);
-    const overriddenStyles = overrideMaterialUIStyles(themeColors);
+    if (!options.themeTypography) {
+        options.themeTypography = DefaultCreateAppThemeOptions.DefaultAppThemeTypography();
+    }
+
+    const overriddenPalette = overrideMaterialUIPalette(options.themeColors);
+    const overriddenStyles = overrideMaterialUIStyles(options.themeColors);
 
     const muiTheme = createMuiTheme({
         palette: overriddenPalette,
         overrides: overriddenStyles,
     });
 
-    const appTheme: IAppTheme = new AppTheme(muiTheme, themeColors, themeTypography);
+    const appTheme: IAppTheme = new AppTheme(muiTheme, options);
     return appTheme;
 }
