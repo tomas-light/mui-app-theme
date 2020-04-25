@@ -1,4 +1,4 @@
-import { CSSProperties } from "react";
+import { CSSProperties } from "@material-ui/core/styles/withStyles";
 import { IAppThemeTypography } from "./IAppThemeTypography";
 
 export class AppThemeTypography implements IAppThemeTypography {
