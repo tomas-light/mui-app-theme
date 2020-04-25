@@ -22,7 +22,7 @@ export class AppThemeTypography implements IAppThemeTypography {
         this["200"] = this.createVariant(300, 14, "20px", 0.01071);
         this["300"] = this.createVariant(300, 16, "22px", 0.00938);
         this["400"] = this.createVariant(300, 18, "25px", 0);
-        this["700"] = this.createVariant(300, 24, "34px", -0.00833);
+        this["700"] = this.createVariant(400, 24, "34px", -0.00833);
     }
 
     protected createVariant(
